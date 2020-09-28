@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: rgb(29,28,46);
+  background: -moz-radial-gradient(circle, rgba(29,28,46,1) 0%, rgba(10,10,10,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(29,28,46,1) 0%, rgba(10,10,10,1) 100%);
+  background: radial-gradient(circle, rgba(29,28,46,1) 0%, rgba(10,10,10,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d1c2e",endColorstr="#0a0a0a",GradientType=1);
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* containers */
+
+.App {
+  display: grid;
+  grid-template-columns: 10vw auto;
+  grid-template-rows: 40vh 20vh auto 20vh;
+  grid-template-areas: 
+    "HeaderLeft HeaderRight"
+    "AboutMeLeft AboutMeRight"
+    "ContentLeft ContentRight"
+    "FooterLeft FooterRight"
+  ;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.HeaderLeft {
+  justify-self: end;
+  grid-area: HeaderLeft;
+  margin-right: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.HeaderRight {
+  grid-area: HeaderRight;
+  justify-self: start;
+  display: flex;
+  flex-flow: column;
+  border-left: 1px solid rgb(110, 110, 147);
+  padding-left: 2rem;
+}
+
+.ContentLeft {
+  grid-area: ContentLeft;
+}
+
+.AboutMeLeft {
+  grid-area: AboutMeLeft;
+}
+
+.ContentRight, .AboutMeRight {
+  justify-self: start;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  /* border-left: 1px solid white; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.ContentRight {
+  margin-top: 20rem;
+  border-top: 1px solid rgb(110, 110, 147);
+  padding-top: 2rem;
+}
+
+.AboutMeRight {
+  line-height: 2.3rem;
+  border-left: 1px solid rgb(110, 110, 147);
+}
+
+.Project {
+  box-sizing: border-box;
+  background-color: rgb(50, 50, 66);
+  border: 1px solid rgb(110, 110, 147);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  min-width: 50vw;
+  max-width: 50vw;
+  flex: 1 1 20vh;
+  margin: 3rem 0;
+  line-height: 1.5rem;
+}
+
+.FooterLeft {
+  grid-area: FooterLeft;
+}
+
+.FooterRight {
+  grid-area: FooterRight;
+  justify-self: start;
+  align-self: end;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.Technologies {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 0;
+}
+
+/* Spans */
+
+.EnglishName {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.ChineseName {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.MyTitle {
+  color: rgb(177, 255, 170);
+  margin-bottom: 1rem;
+  letter-spacing: 0.4rem;
+}
+
+.AboutMe {
+  font-size: 1.5rem;
+  max-width: 35vw;
+}
+
+.Technology {
+  box-sizing: border-box;
+  color: rgb(177, 255, 170);
+  padding: 0.5rem 1rem;
+  /* margin: 0 0.5rem; */
+  border: 1px solid rgb(143, 163, 141);
+  border-radius: 0.2rem;
+}
+
+/* images */
+
+.Logo {
+  max-width: 7rem;
 }
