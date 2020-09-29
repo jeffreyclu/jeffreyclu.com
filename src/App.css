@@ -35,10 +35,18 @@ h3 {
   font-weight: 100;
   margin-bottom: 0.2rem;
   line-height: 0.5rem;
+  text-decoration: underline;
+  text-decoration-color: rgb(164, 14, 76);
+  text-decoration-thickness: 500%;
 }
 
 p {
   font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* containers */
@@ -46,7 +54,7 @@ p {
 .App {
   display: grid;
   grid-template-columns: 10vw auto;
-  grid-template-rows: 40vh 20vh auto 20vh;
+  grid-template-rows: 30rem 17rem auto 5rem;
   grid-template-areas: 
     "HeaderLeft HeaderRight"
     "AboutMeLeft AboutMeRight"
@@ -94,24 +102,31 @@ p {
 .ContentRight {
   margin-top: 20rem;
   border-top: 1px solid rgb(110, 110, 147);
+  border-bottom: 1px solid rgb(110, 110, 147);
   padding-top: 2rem;
+  padding-bottom: 10rem;
 }
 
 .AboutMeRight {
   line-height: 2.3rem;
   border-left: 1px solid rgb(110, 110, 147);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
 }
 
 .Project {
   box-sizing: border-box;
-  background-color: rgb(50, 50, 66);
-  border: 1px solid rgb(110, 110, 147);
-  border-radius: 0.5rem;
-  padding: 2rem;
-  min-width: 50vw;
-  max-width: 50vw;
+  /* background-color: rgb(50, 50, 66); */
+  border-left: 1px solid rgb(110, 110, 147);
+  /* border-radius: 0.5rem; */
+  /* padding: 2rem; */
+  max-width: 40vw;
   flex: 1 1 20vh;
-  margin: 3rem 0;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  margin-left: -2rem;
+  padding-left: 2rem;
   line-height: 1.5rem;
 }
 
@@ -123,7 +138,7 @@ p {
   grid-area: FooterRight;
   justify-self: start;
   align-self: end;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   padding-left: 2rem;
 }
 
@@ -134,7 +149,11 @@ p {
 }
 
 .Description {
-  /* margin-top: 2rem; */
+  font-size: 1.15rem;
+}
+
+.Video {
+  margin: 2rem 0;
 }
 
 .Buttons {
@@ -147,17 +166,21 @@ p {
 
 /* buttons */
 
-.DemoButton, .SourceButton {
+.DemoButton, .SourceButton, .ContactButton {
   padding: 0.5rem 1rem;
-  margin-right: 2rem;
   font-size: 1.1rem;
   border-radius: 0.5rem;
-  margin-right: 2rem;
+  margin-right: 1.2rem;
 }
 
 .DemoButton {
-  /* background-color: rgb(164, 14, 76); */
-  background-color: rgb(244, 201, 93);
+  background-color: rgb(164, 14, 76);
+  /* background-color: rgb(244, 201, 93); */
+  font-weight: 700;
+}
+
+.ContactButton {
+  background-color: rgb(164, 14, 76);
   font-weight: 700;
 }
 
@@ -196,7 +219,8 @@ p {
   /* margin: 0 0.5rem; */
   border-right: 1px solid rgb(143, 163, 141);
   /* border-radius: 0.2rem; */
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
 }
 
 .Technology:nth-of-type(1) {

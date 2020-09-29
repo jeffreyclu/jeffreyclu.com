@@ -1,48 +1,69 @@
 import React from 'react';
+import ReactPlayer from 'react-player/lazy';
+
 import logo from './logo.png';
 import './App.css';
 
 const data = [
   {
-    title: "Project 1",
-    technologies: ["HTML5", "CSS", "Javascript"],
-    description: "blahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblah blahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblahblahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblahblahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblahblahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblahblahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblahblahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblahblahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblahblahblahblah blahblahblah blahblahblah blahblahblah blahblahblahblahblahblah  blahblahblah",
+    title: "React Pinpoint",
+    technologies: ["React", "Puppeteer", "Node js", "Docker", "Github Actions"],
+    description: "An open-source utility library for measuring React component render times. Used in conjunction with Puppeteer js to test render times against a specified threshold. Also provides a CLI to generate Docker files for performance testing without influence from hardware limitations.",
+    // demoLink: "https://github.com/oslabs-beta/react-pinpoint",
+    sourceLink: "https://github.com/oslabs-beta/react-pinpoint",
+    videoLink: "https://www.youtube.com/watch?v=P4oyNOSxGBY&t=0s",
   },
   {
-    title: "Project 1",
-    technologies: ["HTML5", "CSS", "Javascript"],
-    description: "blahblahblah",
+    title: "Periodic Table of Sports",
+    technologies: ["React with Hooks", "CSS", "Google Docs API"],
+    description: "For this project, I collaborated with the Sports team at Perkins Eastman who wanted to display sports in a 'periodic table'. After several rounds of ideation, we settled on an interactive UI that lets users sort the table by different categories and filter the cards by different metrics. The database is a Google Sheet, so the Sports team can adjust the data and see changes reflected in real time.",
+    demoLink: "https://jstable.herokuapp.com",
+    sourceLink: "https://github.com/jeffreyclu/periodic-table-of-sports",
+    // videoLink: "https://vimeo.com/448412893",
   },
   {
-    title: "Project 1",
-    technologies: ["HTML5", "CSS", "Javascript"],
-    description: "blahblahblah",
+    title: "friend.ly",
+    technologies: ["React", "SCSS", "Express", "MongoDB", "Mongoose", "bcrypt js"],
+    description: "Like many other introverts, I suffer from social anxiety and often find it hard to make new friends. I often want to do things alone, but I also often want to share the experience of watching an epic movie or seeing an insane live performance with someone. This concept app aims to help you make new friends, by matching you with other users in your location who share your interests.",
+    demoLink: "https://thefriendlyapp.herokuapp.com",
+    sourceLink: "https://github.com/jeffreyclu/friend.ly",
   },
   {
-    title: "Project 1",
-    technologies: ["HTML5", "CSS", "Javascript"],
-    description: "blahblahblah",
-  }
+    title: "Subway Time",
+    technologies: ["React", "SCSS", "Express", "MongoDB", "Mongoose", "bcrypt js"],
+    description: "Frustrated by Google Map's inaccurate subway arrival and departure time reporting, I set out to create my own app to pull from the MTA's real-time data feeds. Users can search for and pull live data from any of the New York City's subway stations. Features persistence through local storage.",
+    demoLink: "https://subway-time.herokuapp.com",
+    sourceLink: "https://github.com/jeffreyclu/subway-time",
+    // videoLink: "https://vimeo.com/425263915",
+  },
 ]
 
 const Project = ({ project }) => {
+  const { title, description, demoLink, sourceLink, videoLink } = project;
   const technologies = project.technologies.map((t, i) => <span className="Technology" key={`t${i}`}>{t}</span>)
   return (
     <div className="Project">
-      <h3>{project.title}</h3>
+      <h3>{title}</h3>
       <div className="Technologies">
         {technologies}
       </div>
       <div className="Description">
-        {project.description}
+        {description}
+      </div>
+      {/* {videoId && <YouTube
+        containerClassName="Video" 
+        videoId="P4oyNOSxGBY"
+      />} */}
+      <div className="Video">
+        {videoLink && <ReactPlayer url={videoLink} light={true} />}
       </div>
       <div className="Buttons">
-        <div className="DemoButton">
-          View Demo
-        </div>
-        <div className="SourceButton">
-          View Source
-        </div>
+        {demoLink && <div className="DemoButton">
+          <a href={`${demoLink}`} target="_blank" rel="noopener noreferrer">View Demo</a>
+        </div>}
+        {sourceLink && <div className="SourceButton">
+          <a href={`${sourceLink}`} target="_blank" rel="noopener noreferrer">View Source</a>
+        </div>}
       </div>
     </div>
   )
@@ -61,13 +82,16 @@ const App = () => {
       </div>
       <div className="Item AboutMeRight">
         <span className="MyTitle">FULL-STACK DEVELOPER</span>
-        <span className="AboutMe">I am a web developer specializing in modern JavaScript. I enjoy learning new things and love being in the business of solving problems.</span>
+        <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in Brooklyn, NY. I specialize in building JavaScript full-stack web applications with React and Express.</span>
+        <div className="Buttons">
+          <div className="ContactButton"><a href="mailto:hi@jeffreyclu.com">Get in Touch</a></div>
+        </div>
       </div>
       <div className="Item ContentLeft">
       </div>
       <div className="Item ContentRight">
         <h2>PROJECTS</h2>
-       {projects}
+        {projects}
       </div>
       <div className="Item FooterRight">Made with love in Brooklyn. © Jeffrey C. Lu 2020</div>
     </div>
