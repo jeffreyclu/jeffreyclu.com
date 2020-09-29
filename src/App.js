@@ -37,10 +37,10 @@ const Project = ({ project }) => {
         {project.description}
       </div>
       <div className="Buttons">
-        <div classname="DemoButton">
+        <div className="DemoButton">
           View Demo
         </div>
-        <div classname="SourceButton">
+        <div className="SourceButton">
           View Source
         </div>
       </div>
