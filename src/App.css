@@ -173,6 +173,13 @@ a {
   margin-right: 1.2rem;
 }
 
+/* .SocialButton {
+  margin-right: 1.2rem;
+  color: rgb(110, 110, 147);
+  background-color: red;
+  vertical-align: middle;
+} */
+
 .DemoButton {
   background-color: rgb(164, 14, 76);
   /* background-color: rgb(244, 201, 93); */
@@ -235,4 +242,9 @@ a {
 
 .Logo {
   max-width: 7rem;
+}
+
+svg {
+  margin-right: 1.2rem;
+  display: block;
 }

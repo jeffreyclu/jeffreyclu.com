@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
+import { Github, Linkedin } from '@icons-pack/react-simple-icons';
 
 import logo from './logo.png';
 import './App.css';
@@ -30,11 +31,11 @@ const data = [
   },
   {
     title: "Subway Time",
-    technologies: ["React", "SCSS", "Express", "MongoDB", "Mongoose", "bcrypt js"],
-    description: "Frustrated by Google Map's inaccurate subway arrival and departure time reporting, I set out to create my own app to pull from the MTA's real-time data feeds. Users can search for and pull live data from any of the New York City's subway stations. Features persistence through local storage.",
-    demoLink: "https://subway-time.herokuapp.com",
+    technologies: ["HTML5", "CSS", "Express", "mta-gtfs"],
+    description: "Frustrated by Google Map's inaccurate subway arrival and departure time reporting, I set out to create my own app to pull from the MTA's real-time data feeds. Users can search for and pull live data from any of the New York City's subway stations. The 'home' station is stored via the browser's local storage.",
+    // demoLink: "https://subway-time.herokuapp.com",
     sourceLink: "https://github.com/jeffreyclu/subway-time",
-    // videoLink: "https://vimeo.com/425263915",
+    videoLink: "https://vimeo.com/425263915",
   },
 ]
 
@@ -85,6 +86,8 @@ const App = () => {
         <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in Brooklyn, NY. I specialize in building JavaScript full-stack web applications with React and Express.</span>
         <div className="Buttons">
           <div className="ContactButton"><a href="mailto:hi@jeffreyclu.com">Get in Touch</a></div>
+            <a href="https://github.com/jeffreyclu" target="_blank" rel="noopener noreferrer"><Github /></a>
+            <a href="https://www.linkedin.com/in/jeffreyclu/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
         </div>
       </div>
       <div className="Item ContentLeft">
