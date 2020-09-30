@@ -34,7 +34,8 @@ h3 {
   font-size: 2rem;
   font-weight: 100;
   margin-bottom: 0.2rem;
-  line-height: 0.5rem;
+  margin-top: 1rem;
+  line-height: 2.5rem;
   text-decoration: underline;
   text-decoration-color: rgb(164, 14, 76);
   text-decoration-thickness: 500%;
@@ -51,100 +52,161 @@ a {
 
 /* containers */
 
-.App {
-  display: grid;
-  grid-template-columns: 10vw auto;
-  grid-template-rows: 30rem 17rem auto 5rem;
-  grid-template-areas: 
-    "HeaderLeft HeaderRight"
-    "AboutMeLeft AboutMeRight"
-    "ContentLeft ContentRight"
-    "FooterLeft FooterRight"
-  ;
-  justify-items: center;
-  align-items: center;
+@media only screen and (max-width: 1000px) {
+  .App {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    max-width: 100vw;
+  }
+
+  .HeaderLeft {
+    margin-top: 10rem;
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
+
+  .HeaderRight {
+    justify-self: start;
+    display: flex;
+    flex-flow: column;
+    margin-left: 2rem;
+  }
+
+  .AboutMeRight {
+    margin-top: 10rem;
+    line-height: 2.3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    max-width: 100vw;
+    margin-bottom: 5rem;
+  }
+
+  .ContentRight {
+    margin-top: 5rem;
+    border-top: 1px solid rgb(110, 110, 147);
+    border-bottom: 1px solid rgb(110, 110, 147);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    max-width: 100vw;
+  }
+
+  .ContentRight, .AboutMeRight {
+    box-sizing: border-box;
+    justify-self: start;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .Project {
+    box-sizing: border-box;
+    max-width: 100vw;
+    flex: 1 1 20vh;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    margin-left: -2rem;
+    padding-left: 2rem;
+    line-height: 1.5rem;
+  }
+
+  .FooterRight {
+    grid-area: FooterRight;
+    justify-self: start;
+    align-self: end;
+    padding: 2rem;
+  }
 }
 
-.HeaderLeft {
-  justify-self: end;
-  grid-area: HeaderLeft;
-  margin-right: 1rem;
-}
+@media only screen and (min-width: 1000px) {
+  .App {
+    display: grid;
+    grid-template-columns: 10vw auto;
+    grid-template-rows: 30rem 17rem auto 5rem;
+    grid-template-areas: 
+      "HeaderLeft HeaderRight"
+      "AboutMeLeft AboutMeRight"
+      "ContentLeft ContentRight"
+      "FooterLeft FooterRight"
+    ;
+    justify-items: center;
+    align-items: center;
+  }
 
-.HeaderRight {
-  grid-area: HeaderRight;
-  justify-self: start;
-  display: flex;
-  flex-flow: column;
-  border-left: 1px solid rgb(110, 110, 147);
-  padding-left: 2rem;
-}
+  .HeaderRight {
+    grid-area: HeaderRight;
+    justify-self: start;
+    display: flex;
+    flex-flow: column;
+    border-left: 1px solid rgb(110, 110, 147);
+    padding-left: 2rem;
+  }
 
-.ContentLeft {
-  grid-area: ContentLeft;
-}
+  .AboutMeLeft {
+    grid-area: AboutMeLeft;
+  }
 
-.AboutMeLeft {
-  grid-area: AboutMeLeft;
-}
+  .AboutMeRight {
+    line-height: 2.3rem;
+    border-left: 1px solid rgb(110, 110, 147);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    max-width: 35vw;
+  }
 
-.ContentRight, .AboutMeRight {
-  justify-self: start;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  /* border-left: 1px solid white; */
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
+  .ContentLeft {
+    grid-area: ContentLeft;
+  }
 
-.ContentRight {
-  margin-top: 20rem;
-  border-top: 1px solid rgb(110, 110, 147);
-  border-bottom: 1px solid rgb(110, 110, 147);
-  padding-top: 2rem;
-  padding-bottom: 10rem;
-}
+  .ContentRight, .AboutMeRight {
+    justify-self: start;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
-.AboutMeRight {
-  line-height: 2.3rem;
-  border-left: 1px solid rgb(110, 110, 147);
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-}
+  .Project {
+    box-sizing: border-box;
+    /* background-color: rgb(50, 50, 66); */
+    border-left: 1px solid rgb(110, 110, 147);
+    /* border-radius: 0.5rem; */
+    /* padding: 2rem; */
+    max-width: 30vw;
+    flex: 1 1 20vh;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    margin-left: -2rem;
+    padding-left: 2rem;
+    line-height: 1.5rem;
+  }
 
-.Project {
-  box-sizing: border-box;
-  /* background-color: rgb(50, 50, 66); */
-  border-left: 1px solid rgb(110, 110, 147);
-  /* border-radius: 0.5rem; */
-  /* padding: 2rem; */
-  max-width: 40vw;
-  flex: 1 1 20vh;
-  margin-top: 2rem;
-  margin-bottom: 6rem;
-  margin-left: -2rem;
-  padding-left: 2rem;
-  line-height: 1.5rem;
-}
+  .FooterLeft {
+    grid-area: FooterLeft;
+  }
 
-.FooterLeft {
-  grid-area: FooterLeft;
-}
-
-.FooterRight {
-  grid-area: FooterRight;
-  justify-self: start;
-  align-self: end;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
+  .FooterRight {
+    grid-area: FooterRight;
+    justify-self: start;
+    align-self: end;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+  }
 }
 
 .Technologies {
+  box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 1.5rem 0;
 }
 
@@ -163,6 +225,7 @@ a {
   align-items: center;
   margin-top: 2rem;
 }
+
 
 /* buttons */
 
@@ -216,7 +279,6 @@ a {
 
 .AboutMe {
   font-size: 1.5rem;
-  max-width: 35vw;
 }
 
 .Technology {

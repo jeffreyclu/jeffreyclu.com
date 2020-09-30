@@ -72,7 +72,7 @@ const Project = ({ project }) => {
         videoId="P4oyNOSxGBY"
       />} */}
       <div className="Video">
-        {videoLink && <ReactPlayer url={videoLink} light={true} />}
+        {videoLink && <ReactPlayer width='100%' url={videoLink} light={true} />}
       </div>
       <div className="Buttons">
         {demoLink && <div className="DemoButton">
