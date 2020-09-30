@@ -37,6 +37,22 @@ const data = [
     sourceLink: "https://github.com/jeffreyclu/subway-time",
     videoLink: "https://vimeo.com/425263915",
   },
+  {
+    title: "My Celiac Adventure",
+    technologies: ["HTML5", "CSS", "React"],
+    description: "My loving wife Janet was diagnosed with Celiac's disease a couple years ago. Inspired by her invariably frustrating experiences trying to eat out at restaurants, I created this educational game to simulate how every meal decision for people with Celiacs is a potentially life-threatening situation.",
+    demoLink: "https://my-celiac-adventure.herokuapp.com",
+    sourceLink: "https://github.com/jeffreyclu/my-celiac-adventure",
+    // videoLink: "https://vimeo.com/425263915",
+  },
+  {
+    title: "Top 100 Books List",
+    technologies: ["HTML5", "CSS", "Express", "React"],
+    description: "I was inspired to read as many books as I could from the Penguin Classics top 100 books list, but had no practical way to track which books I had read. Who uses a pen and notebook anymore? This is a React based web app with CRUD functionality that features persistence through local storage.",
+    demoLink: "https://my-top-100-books.herokuapp.com",
+    sourceLink: "https://github.com/jeffreyclu/react-book-list",
+    // videoLink: "https://vimeo.com/425263915",
+  },
 ]
 
 const Project = ({ project }) => {
