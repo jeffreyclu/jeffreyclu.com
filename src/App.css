@@ -174,6 +174,14 @@ a {
     max-width: 35vw;
   }
 
+  .ContentRight {
+    margin-top: 20rem;
+    border-top: 1px solid rgb(110, 110, 147);
+    border-bottom: 1px solid rgb(110, 110, 147);
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+  }
+
   .Project {
     box-sizing: border-box;
     /* background-color: rgb(50, 50, 66); */
