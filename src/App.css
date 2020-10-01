@@ -292,20 +292,19 @@ a {
 .Technology {
   box-sizing: border-box;
   color: rgb(177, 255, 170);
-  padding: 0.1rem 1rem;
-  /* margin: 0 0.5rem; */
-  border-right: 1px solid rgb(143, 163, 141);
-  /* border-radius: 0.2rem; */
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
 }
 
-.Technology:nth-of-type(1) {
-  padding-left: 0;
+.Technology:nth-last-of-type(1):after {
+  border: none;
 }
 
-.Technology:nth-last-of-type(1) {
-  border-right: none;
+.Technology:after {
+  content: '';
+  border: 1px solid rgb(78, 89, 77);
+  margin: 1rem;
+  padding: 0.1rem 0;
 }
 
 /* images */
