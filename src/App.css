@@ -333,7 +333,7 @@ svg {
 }
 
 /* Animation */
-.HeaderLeft {
+/* .HeaderLeft {
   animation: down 0.8s ease-in-out;
 }
 
@@ -351,7 +351,7 @@ svg {
 
 .FooterLeft, .FooterRight {
   animation: appear 1s backwards 3.5s;
-}
+} */
 
 @keyframes appear {
   0% { opacity: 0%;}
