@@ -40,7 +40,7 @@ const data = [
   {
     title: "My Celiac Adventure",
     technologies: ["HTML5", "CSS", "React"],
-    description: "My loving wife Janet was diagnosed with Celiac's disease a couple years ago. Inspired by her invariably frustrating experiences trying to eat out at restaurants, I created this educational game to simulate how every meal decision for people with Celiacs is a potentially life-threatening situation.",
+    description: "My loving wife Janet was diagnosed with Celiac's disease a couple years ago. Inspired by her invariably frustrating experiences trying to eat out at restaurants, I created this educational game to simulate how every meal decision for people with Celiac's is a potentially life-threatening situation.",
     demoLink: "https://my-celiac-adventure.herokuapp.com",
     sourceLink: "https://github.com/jeffreyclu/my-celiac-adventure",
     // videoLink: "https://vimeo.com/425263915",
@@ -48,7 +48,7 @@ const data = [
   {
     title: "Top 100 Books List",
     technologies: ["HTML5", "CSS", "Express", "React"],
-    description: "I was inspired to read as many books as I could from the Penguin Classics top 100 books list, but had no practical way to track which books I had read. Who uses a pen and notebook anymore? This is a React based web app with CRUD functionality that features persistence through local storage.",
+    description: "I was inspired to read as many books as I could from the Penguin Classics top 100 books list, but had no practical way to track which books I had read. Who uses a pen and notebook anymore, anyway ;)? This is a React based web app with CRUD functionality that features persistence through local storage.",
     demoLink: "https://my-top-100-books.herokuapp.com",
     sourceLink: "https://github.com/jeffreyclu/react-book-list",
     // videoLink: "https://vimeo.com/425263915",
@@ -60,7 +60,7 @@ const Project = ({ project }) => {
   const technologies = project.technologies.map((t, i) => <span className="Technology" key={`t${i}`}>{t}</span>)
   return (
     <div className="Project">
-      <h3>{title}</h3>
+      <h3><a href={demoLink || sourceLink}>{title}</a></h3>
       <div className="Technologies">
         {technologies}
       </div>
@@ -75,12 +75,18 @@ const Project = ({ project }) => {
         {videoLink && <ReactPlayer width='100%' url={videoLink} light={true} />}
       </div>
       <div className="Buttons">
-        {demoLink && <div className="DemoButton">
-          <a href={`${demoLink}`} target="_blank" rel="noopener noreferrer">View Demo</a>
-        </div>}
-        {sourceLink && <div className="SourceButton">
-          <a href={`${sourceLink}`} target="_blank" rel="noopener noreferrer">View Source</a>
-        </div>}
+        {demoLink && 
+          <><a href={`${demoLink}`} target="_blank" rel="noopener noreferrer">
+            <div className="DemoButton">
+              View Demo
+            </div>
+          </a></>}
+        {sourceLink && 
+          <><a href={`${sourceLink}`} target="_blank" rel="noopener noreferrer">
+            <div className="SourceButton">
+              View Source
+            </div>
+          </a></>}
       </div>
     </div>
   )
@@ -101,9 +107,9 @@ const App = () => {
         <span className="MyTitle">FULL-STACK DEVELOPER</span>
         <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in Brooklyn, NY. I specialize in building JavaScript full-stack web applications with React and Express.</span>
         <div className="Buttons">
-          <div className="ContactButton"><a href="mailto:hi@jeffreyclu.com">Get in Touch</a></div>
-            <a href="https://github.com/jeffreyclu" target="_blank" rel="noopener noreferrer"><Github /></a>
-            <a href="https://www.linkedin.com/in/jeffreyclu/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+          <a href="mailto:hi@jeffreyclu.com"><div className="ContactButton">Get in Touch</div></a>
+          <a href="https://github.com/jeffreyclu" target="_blank" rel="noopener noreferrer"><Github /></a>
+          <a href="https://www.linkedin.com/in/jeffreyclu/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
         </div>
       </div>
       <div className="Item ContentLeft">
