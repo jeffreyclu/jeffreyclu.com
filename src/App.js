@@ -12,7 +12,7 @@ const data = [
     description: "An open-source utility library for measuring React component render times. Used in conjunction with Puppeteer js to test render times against a specified threshold. Also provides a CLI to generate Docker files for performance testing without influence from hardware limitations.",
     demoLink: "https://reactpinpoint.com",
     sourceLink: "https://github.com/oslabs-beta/react-pinpoint",
-    videoLink: "https://www.youtube.com/watch?v=P4oyNOSxGBY&t=0s",
+    // videoLink: "https://www.youtube.com/watch?v=P4oyNOSxGBY&t=0s",
   },
   {
     title: "Periodic Table of Sports",
