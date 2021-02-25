@@ -94,8 +94,10 @@ const Project = ({ project }) => {
 
 const App = () => {
   const projects = data.map((p, i) => <Project project={p} key={`${p.title}${i}`} />);
+
   return (
     <div className="App">
+      
       <div className="Item HeaderLeft"><img src={logo} className="Logo" alt="logo" /></div>
       <div className="Item HeaderRight">
         <span className="Item EnglishName">JEFFREY C. LU</span>
@@ -107,7 +109,8 @@ const App = () => {
         <span className="MyTitle">FULL-STACK DEVELOPER</span>
         <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in Brooklyn, NY. I specialize in building JavaScript full-stack web applications with React and Express.</span>
         <div className="Buttons">
-          <a href="mailto:hi@jeffreyclu.com"><div className="ContactButton">Get in Touch</div></a>
+          <a href="#"><div className="ContactButton" onClick={() => window.Calendly && window.Calendly.initPopupWidget({url: 'https://calendly.com/jeffreyclu/15min'})}>Book a Time</div></a>
+          <a href="mailto:hi@jeffreyclu.com"><div className="SourceButton">Drop a Line</div></a>
           <a href="https://github.com/jeffreyclu" target="_blank" rel="noopener noreferrer"><Github /></a>
           <a href="https://www.linkedin.com/in/jeffreyclu/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
         </div>
