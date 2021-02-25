@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
-import { Github, Linkedin } from '@icons-pack/react-simple-icons';
+import { Github, Linkedin, Instagram } from '@icons-pack/react-simple-icons';
 
 import logo from './logo.png';
 import './App.css';
@@ -13,6 +13,14 @@ const data = [
     demoLink: "https://reactpinpoint.com",
     sourceLink: "https://github.com/oslabs-beta/react-pinpoint",
     // videoLink: "https://www.youtube.com/watch?v=P4oyNOSxGBY&t=0s",
+  },
+  {
+    title: "Subway Time",
+    technologies: ["HTML5", "CSS", "Express", "mta-gtfs"],
+    description: "Frustrated by Google Map's inaccurate subway arrival and departure time reporting, I set out to create my own app to pull from the MTA's real-time data feeds. Users can search for and pull live data from any of the New York City's subway stations. The 'home' station is stored via the browser's local storage.",
+    demoLink: "https://subway-time.herokuapp.com",
+    sourceLink: "https://github.com/jeffreyclu/subway-time",
+    videoLink: "https://vimeo.com/425263915",
   },
   {
     title: "Periodic Table of Sports",
@@ -28,14 +36,6 @@ const data = [
     description: "Like many other introverts, I suffer from social anxiety and often find it hard to make new friends. I often want to do things alone, but I also often want to share the experience of watching an epic movie or seeing an insane live performance with someone. This concept app aims to help you make new friends, by matching you with other users in your location who share your interests.",
     demoLink: "https://thefriendlyapp.herokuapp.com",
     sourceLink: "https://github.com/jeffreyclu/friend.ly",
-  },
-  {
-    title: "Subway Time",
-    technologies: ["HTML5", "CSS", "Express", "mta-gtfs"],
-    description: "Frustrated by Google Map's inaccurate subway arrival and departure time reporting, I set out to create my own app to pull from the MTA's real-time data feeds. Users can search for and pull live data from any of the New York City's subway stations. The 'home' station is stored via the browser's local storage.",
-    // demoLink: "https://subway-time.herokuapp.com",
-    sourceLink: "https://github.com/jeffreyclu/subway-time",
-    videoLink: "https://vimeo.com/425263915",
   },
   {
     title: "My Celiac Adventure",
@@ -74,7 +74,7 @@ const Project = ({ project }) => {
       <div className="Video">
         {videoLink && <ReactPlayer width='100%' url={videoLink} light={true} />}
       </div>
-      <div className="Buttons">
+      <div className="ButtonSection">
         {demoLink && 
           <><a href={`${demoLink}`} target="_blank" rel="noopener noreferrer">
             <div className="DemoButton">
@@ -109,10 +109,15 @@ const App = () => {
         <span className="MyTitle">FULL-STACK DEVELOPER</span>
         <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in Brooklyn, NY. I specialize in building JavaScript full-stack web applications with React and Express.</span>
         <div className="Buttons">
-          <a href="#"><div className="ContactButton" onClick={() => window.Calendly && window.Calendly.initPopupWidget({url: 'https://calendly.com/jeffreyclu/15min'})}>Book a Time</div></a>
-          <a href="mailto:hi@jeffreyclu.com"><div className="SourceButton">Drop a Line</div></a>
-          <a href="https://github.com/jeffreyclu" target="_blank" rel="noopener noreferrer"><Github /></a>
-          <a href="https://www.linkedin.com/in/jeffreyclu/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+          <div className="ButtonSection">
+            <a href="#"><div className="ContactButton" onClick={() => window.Calendly && window.Calendly.initPopupWidget({url: 'https://calendly.com/jeffreyclu/15min'})}>Book a Time</div></a>
+            <a href="mailto:hi@jeffreyclu.com"><div className="SourceButton">Drop a Line</div></a>
+          </div>
+          <div className="ButtonSection">
+            <a href="https://github.com/jeffreyclu" target="_blank" rel="noopener noreferrer"><Github /></a>
+            <a href="https://www.linkedin.com/in/jeffreyclu/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+            <a href="https://www.instagram.com/jeffreyclu/" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+          </div>
         </div>
       </div>
       <div className="Item ContentLeft">
@@ -121,7 +126,7 @@ const App = () => {
         <h2>PROJECTS</h2>
         {projects}
       </div>
-      <div className="Item FooterRight">Made with love in Brooklyn. © Jeffrey C. Lu 2020</div>
+      <div className="Item FooterRight">Made with love in New Jersey. © Jeffrey C. Lu 2021</div>
     </div>
   );
 }
