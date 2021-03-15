@@ -30,13 +30,13 @@ const data = [
     sourceLink: "https://github.com/jeffreyclu/periodic-table-of-sports",
     // videoLink: "https://vimeo.com/448412893",
   },
-  {
-    title: "friend.ly",
-    technologies: ["React", "SCSS", "Express", "MongoDB", "Mongoose", "bcrypt js"],
-    description: "Like many other introverts, I suffer from social anxiety and often find it hard to make new friends. I often want to do things alone, but I also often want to share the experience of watching an epic movie or seeing an insane live performance with someone. This concept app aims to help you make new friends, by matching you with other users in your location who share your interests.",
-    demoLink: "https://thefriendlyapp.herokuapp.com",
-    sourceLink: "https://github.com/jeffreyclu/friend.ly",
-  },
+  // {
+  //   title: "friend.ly",
+  //   technologies: ["React", "SCSS", "Express", "MongoDB", "Mongoose", "bcrypt js"],
+  //   description: "Like many other introverts, I suffer from social anxiety and often find it hard to make new friends. I often want to do things alone, but I also often want to share the experience of watching an epic movie or seeing an insane live performance with someone. This concept app aims to help you make new friends, by matching you with other users in your location who share your interests.",
+  //   demoLink: "https://thefriendlyapp.herokuapp.com",
+  //   sourceLink: "https://github.com/jeffreyclu/friend.ly",
+  // },
   {
     title: "My Celiac Adventure",
     technologies: ["HTML5", "CSS", "React"],
@@ -45,14 +45,14 @@ const data = [
     sourceLink: "https://github.com/jeffreyclu/my-celiac-adventure",
     // videoLink: "https://vimeo.com/425263915",
   },
-  {
-    title: "Top 100 Books List",
-    technologies: ["HTML5", "CSS", "Express", "React"],
-    description: "I was inspired to read as many books as I could from the Penguin Classics top 100 books list, but had no practical way to track which books I had read. Who uses a pen and notebook anymore, anyway ;)? This is a React based web app with CRUD functionality that features persistence through local storage.",
-    demoLink: "https://my-top-100-books.herokuapp.com",
-    sourceLink: "https://github.com/jeffreyclu/react-book-list",
-    // videoLink: "https://vimeo.com/425263915",
-  },
+  // {
+  //   title: "Top 100 Books List",
+  //   technologies: ["HTML5", "CSS", "Express", "React"],
+  //   description: "I was inspired to read as many books as I could from the Penguin Classics top 100 books list, but had no practical way to track which books I had read. Who uses a pen and notebook anymore, anyway ;)? This is a React based web app with CRUD functionality that features persistence through local storage.",
+  //   demoLink: "https://my-top-100-books.herokuapp.com",
+  //   sourceLink: "https://github.com/jeffreyclu/react-book-list",
+  //   // videoLink: "https://vimeo.com/425263915",
+  // },
 ]
 
 const Project = ({ project }) => {
@@ -107,7 +107,9 @@ const App = () => {
       </div>
       <div className="Item AboutMeRight">
         <span className="MyTitle">FULL-STACK DEVELOPER</span>
-        <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in Brooklyn, NY. I specialize in building JavaScript full-stack web applications with React and Express.</span>
+        <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in NJ. I specialize in building JavaScript full-stack web applications with React and Express.</span>
+        <br />
+        <span className="AboutMe">Currently building <a className="Underline" href="https://marquee.gs.com" target="_blank" rel="noopener noreferrer">Marquee</a> @ <a className="Underline" href="https://www.goldmansachs.com" target="_blank" rel="noopener noreferrer">Goldman Sachs</a>.</span>
         <div className="Buttons">
           <div className="ButtonSection">
             <a href="#"><div className="ContactButton" onClick={() => window.Calendly && window.Calendly.initPopupWidget({url: 'https://calendly.com/jeffreyclu/15min'})}>Book a Time</div></a>
@@ -124,7 +126,7 @@ const App = () => {
       </div>
       <div className="Item ContentRight">
         <h2>PROJECTS</h2>
-        {projects}
+        {projects && projects}
       </div>
       <div className="Item FooterRight">Made with love in New Jersey. © Jeffrey C. Lu 2021</div>
     </div>
