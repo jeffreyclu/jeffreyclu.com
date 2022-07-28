@@ -109,7 +109,7 @@ const App = () => {
         <span className="MyTitle">FULL-STACK DEVELOPER</span>
         <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in NJ. I specialize in building JavaScript full-stack web applications with React and Express.</span>
         <br />
-        <span className="AboutMe">Currently building tools for connecting students with employers @ <a className="Underline" href="https://www.joinhandshake.com" target="_blank" rel="noopener noreferrer">Handshake</a>. Ex-Goldman Sachs.</span>
+        <span className="AboutMe">Currently building tools for connecting students with employers @ <a className="Underline" href="https://www.joinhandshake.com" target="_blank" rel="noopener noreferrer">Handshake</a>. Ex-<a className="Underline" href="https://marquee.gs.com/welcome/" target="_blank" rel="noopener noreferrer">Goldman Sachs.</a></span>
         <div className="Buttons">
           <div className="ButtonSection">
             <a href="#"><div className="ContactButton" onClick={() => window.Calendly && window.Calendly.initPopupWidget({url: 'https://calendly.com/jeffreyclu/15min'})}>Book a Time</div></a>
