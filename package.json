@@ -1,7 +1,6 @@
 {
   "name": "jeffreyclu.com",
   "version": "0.1.0",
-  "homepage": "https://jeffreyclu.github.io/jeffreyclu.com/",
   "private": true,
   "dependencies": {
     "@icons-pack/react-simple-icons": "^3.10.0",
