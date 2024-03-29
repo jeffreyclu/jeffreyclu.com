@@ -4,7 +4,7 @@ import { Github, Linkedin, Instagram } from '@icons-pack/react-simple-icons';
 import logo from './logo.png';
 import './App.css';
 
-const data = [
+const projectsData = [
   {
     title: "Thememaker Chrome Extension",
     technologies: ["HTML", "CSS", "JavaScript", "Chrome Extension", "The Color API"],
@@ -49,7 +49,7 @@ const data = [
 ]
 
 const Project = ({ project }) => {
-  const { title, description, demoLink, sourceLink, videoLink } = project;
+  const { title, description, demoLink, sourceLink } = project;
   const technologies = project.technologies.map((t, i) => <span className="Technology" key={`t${i}`}>{t}</span>)
   return (
     <div className="Project">
@@ -79,8 +79,7 @@ const Project = ({ project }) => {
 }
 
 const App = () => {
-  const projects = data.map((p, i) => <Project project={p} key={`${p.title}${i}`} />);
-
+  const projects = projectsData.map((p, i) => <Project project={p} key={`${p.title}${i}`} />);
   return (
     <div className="App">
       
@@ -92,10 +91,10 @@ const App = () => {
       <div className="Item AboutMeLeft">
       </div>
       <div className="Item AboutMeRight">
-        <span className="MyTitle">FULL-STACK DEVELOPER</span>
-        <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in NJ. I specialize in building JavaScript full-stack web applications with React and Express.</span>
+        <span className="MyTitle">EXPERIENCED FRONT-END DEVELOPER</span>
+        <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in NJ. I specialize in crafting delightful user experiences for the web.</span>
         <br />
-        <span className="AboutMe">Currently building tools for connecting students with employers @ <a className="Underline" href="https://www.joinhandshake.com" target="_blank" rel="noopener noreferrer">Handshake</a>. Ex-<a className="Underline" href="https://marquee.gs.com/welcome/" target="_blank" rel="noopener noreferrer">Goldman Sachs.</a></span>
+        <span className="AboutMe">Currently building canvas tools for creatives @ <a className="Underline" href="https://www.mural.co" target="_blank" rel="noopener noreferrer">Mural</a>. Ex-<a className="Underline" href="https://www.handshake.com" target="_blank" rel="noopener noreferrer">Handshake</a>, <a className="Underline" href="https://marquee.gs.com/welcome/" target="_blank" rel="noopener noreferrer">Goldman Sachs.</a></span>
         <div className="Buttons">
           <div className="ButtonSection">
             <a href="#"><div className="ContactButton" onClick={() => window.Calendly && window.Calendly.initPopupWidget({url: 'https://calendly.com/jeffreyclu/15min'})}>Book a Time</div></a>
@@ -114,7 +113,7 @@ const App = () => {
         <h2>PROJECTS</h2>
         {projects && projects}
       </div>
-      <div className="Item FooterRight">Made with love in New Jersey. © Jeffrey C. Lu 2021</div>
+      <div className="Item FooterRight">Made with love in New Jersey. © Jeffrey C. Lu 2024</div>
     </div>
   );
 }
