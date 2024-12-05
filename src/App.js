@@ -94,7 +94,10 @@ const App = () => {
         <span className="MyTitle">EXPERIENCED FRONT-END DEVELOPER</span>
         <span className="AboutMe">I'm a former architect (buildings!) turned web developer based in NJ. I specialize in crafting delightful user experiences for the web.</span>
         <br />
-        <span className="AboutMe">Currently building canvas tools for creatives @ <a className="Underline" href="https://www.mural.co" target="_blank" rel="noopener noreferrer">Mural</a>. Ex-<a className="Underline" href="https://www.handshake.com" target="_blank" rel="noopener noreferrer">Handshake</a>, <a className="Underline" href="https://marquee.gs.com/welcome/" target="_blank" rel="noopener noreferrer">Goldman Sachs.</a></span>
+        <span className="AboutMe">Currently building developer superpowers @ <a className="Underline" href="https://www.webflow.com" target="_blank" rel="noopener noreferrer">Webflow</a>. 
+          Ex-<a className="Underline" href="https://www.mural.co" target="_blank" rel="noopener noreferrer">Mural</a>, 
+          <a className="Underline" href="https://www.handshake.com" target="_blank" rel="noopener noreferrer">Handshake</a>, 
+          <a className="Underline" href="https://marquee.gs.com/welcome/" target="_blank" rel="noopener noreferrer">Goldman Sachs.</a></span>
         <div className="Buttons">
           <div className="ButtonSection">
             <a href="#"><div className="ContactButton" onClick={() => window.Calendly && window.Calendly.initPopupWidget({url: 'https://calendly.com/jeffreyclu/15min'})}>Book a Time</div></a>
